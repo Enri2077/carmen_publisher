@@ -73,7 +73,7 @@ class carmen2rosbag:
 		RAWLASER3_topic   = rospy.get_param("~RAWLASER3_topic", "/RAWLASER3")
 		RAWLASER4_topic   = rospy.get_param("~RAWLASER4_topic", "/RAWLASER4")
 		
-		FLASER_topic 	  = rospy.get_param("~FLASER_topic", "/FLASER")
+		FLASER_topic 	  = rospy.get_param("~FLASER_topic", "/scan")
 		RLASER_topic 	  = rospy.get_param("~RLASER_topic", "/RLASER")
 		LASER3_topic 	  = rospy.get_param("~LASER3_topic", "/LASER3")
 		LASER4_topic 	  = rospy.get_param("~LASER4_topic", "/LASER4")
@@ -84,7 +84,7 @@ class carmen2rosbag:
 		NMEAGGA_topic 	  = rospy.get_param("~NMEAGGA_topic", "/NMEAGGA")
 		NMEARMC_topic 	  = rospy.get_param("~NMEARMC_topic", "/NMEARMC")
 		
-		ODOM_topic 	  	  = rospy.get_param("~ODOM_topic", "/ODOM")
+		ODOM_topic 	  	  = rospy.get_param("~ODOM_topic", "/odom")
 		TRUEPOS_topic 	  = rospy.get_param("~TRUEPOS_topic", "/TRUEPOS")
 		
 		tf_topic      	  = rospy.get_param("~tf_topic", "/tf")
