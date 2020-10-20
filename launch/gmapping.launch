@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="output" default="screen"/>
+
+    <param name="use_sim_time" value="true" />
+
+    <node name="gmapping"
+          pkg="gmapping"
+          type="slam_gmapping"
+          output="$(arg output)" >
+        <rosparam file="$(find carmen_publisher)/config/gmapping.yaml" />
+    </node>
+
+	<node name="$(anon rosbag_player)"
+	      pkg="rosbag"
+	      type="play"
+	      output="$(arg output)"
+	      args="/home/enrico/ds/performance_modelling/radish_datasets/dataset/freiburg2_pioneer_slam/data/rgbd_dataset_freiburg2_pioneer_slam.bag --clock --pause"
+    />
+
+    <node name="rviz"
+          pkg="rviz"
+          type="rviz"
+          output="$(arg output)"
+          args="-d /home/enrico/ds/performance_modelling/radish_datasets/dataset/fr079/data/r.rviz"
+    />
+
+</launch>
